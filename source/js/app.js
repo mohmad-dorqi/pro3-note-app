@@ -10,7 +10,7 @@ function clear() {
     input.style.backgroundColor = '#fff'
 }
 function creatrnote() {
-    if (input.value) {
+    if(input.value){
         let newelmnt = $.createElement('div')
         newelmnt.style.backgroundColor = input.style.backgroundColor
         newelmnt.className = 'card shadow-sm rounded'
@@ -20,13 +20,13 @@ function creatrnote() {
         pelm.innerHTML = input.value
         notecontainer.append(newelmnt)
         clear();
-        newelmnt.addEventListener('click', deletelm)
-
+        newelmnt.addEventListener('click',deletelm)
+    
     }
-
+   
 }
-function deletelm(event) {
-    event.target.parentElement.remove()
+function deletelm(event){
+  event.target.parentElement.remove()
 }
 
 
@@ -43,9 +43,9 @@ btn_delete.addEventListener('click', function () {
 
 input.addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {
-
+       
         creatrnote()
+    }
 
-
-    })
-btn_save.addEventListener('click', creatrnote)
+})
+btn_save.addEventListener('click',creatrnote)
